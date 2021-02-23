@@ -1,31 +1,65 @@
-import logo from './logo.svg';
-import './App.css';
 import { DateTime } from 'luxon';
 
 import Example from './components/LineChat'
 
 export const data01 = [
-  { date: DateTime.local(2021, 2, 1), max: 10, min: 1 },
-  { date: DateTime.local(2021, 2, 2), max: 12, min: 4 },
-  { date: DateTime.local(2021, 2, 3), max: 18, min: 8 },
-  { date: DateTime.local(2021, 2, 4), max: 10, min: 0 },
-  { date: DateTime.local(2021, 2, 5), max: 9, min: 1 },
-  { date: DateTime.local(2021, 2, 6), max: 13, min: 2 },
-  { date: DateTime.local(2021, 2, 7), max: 16, min: 5 },
-]
+  {
+      name: 'Page A',
+      date: DateTime.local(2021, 2, 1).toFormat('yyyy/MM/dd'),
+      uv: 4000,
+      pv: 2400,
+      amt: 2400,
+  },
+  {
+      name: 'Page B',
+      date: DateTime.local(2021, 2, 2).toFormat('yyyy/MM/dd'),
+      uv: 3000,
+      pv: 1398,
+      amt: 2210,
+  },
+  {
+      name: 'Page C',
+      date: DateTime.local(2021, 2, 3).toFormat('yyyy/MM/dd'),
+      uv: 2000,
+      pv: 9800,
+      amt: 2290,
+  },
+  {
+      name: 'Page D',
+      date: DateTime.local(2021, 2, 4).toFormat('yyyy/MM/dd'),
+      uv: 2780,
+      pv: 3908,
+      amt: 2000,
+  },
+  {
+      name: 'Page E',
+      date: DateTime.local(2021, 2, 5).toFormat('yyyy/MM/dd'),
+      uv: 1890,
+      pv: 4800,
+      amt: 2181,
+  },
+  {
+      name: 'Page F',
+      date: DateTime.local(2021, 2, 6).toFormat('yyyy/MM/dd'),
+      uv: 2390,
+      pv: 3800,
+      amt: 2500,
+  },
+  {
+      name: 'Page G',
+      date: DateTime.local(2021, 2, 7).toFormat('yyyy/MM/dd'),
+      uv: 3490,
+      pv: 4300,
+      amt: 2100,
+  },
+];
 
 function App() {
   return (
     <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-      </header> */}
       <div>
-        <h1>test</h1>
-        <Example />
+        <h1>サンプルグラフ０１</h1>
+        <Example data={data01} />
       </div>
     </div>
   );
